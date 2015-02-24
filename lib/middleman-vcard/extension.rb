@@ -1,3 +1,7 @@
+require "middleman-core"
+require "middleman-vcard/generator"
+
+
 module Middleman
   module VCard
     ##
@@ -31,8 +35,5 @@ module Middleman
       end
 
     end
-
-    alias :included :registered
-
   end
 end
