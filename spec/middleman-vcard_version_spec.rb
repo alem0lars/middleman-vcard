@@ -23,7 +23,7 @@ end
 describe 'Middleman::VCard::VERSION_MINOR' do
 
   it 'should be positive' do
-    expect(MiddlemanVCard::VERSION_MINOR).to be >= 0
+    expect(Middleman::VCard::VERSION_MINOR).to be >= 0
   end
 
 end
