@@ -1,0 +1,26 @@
+# {{{ Ignores for generated/temporary files
+
+# Generated documentation
+doc/
+
+# Log & temporary files
+log/
+tmp/
+
+# Gems
+pkg/
+vendor/cache/*.gem
+
+# }}}
+
+# {{{ Ignores for tools
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
+# SublimeText project files
+*.sublime-project
+*.sublime-workspace
+
+# }}}
