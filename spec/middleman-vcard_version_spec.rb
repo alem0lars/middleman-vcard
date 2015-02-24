@@ -2,25 +2,25 @@ require 'spec_helper'
 require 'middleman-vcard'
 
 
-describe 'MiddlemanVCard::VERSION' do
+describe 'Middleman::VCard::VERSION' do
 
   it 'should have a semver compliant format' do
-    version = MiddlemanVCard::VERSION
+    version = Middleman::VCard::VERSION
     expect(version).to_not be_empty
     expect(version).to match(/[0-9]+\.[0-9]+\.[0-9]+/)
   end
 
 end
 
-describe 'MiddlemanVCard::VERSION_MAJOR' do
+describe 'Middleman::VCard::VERSION_MAJOR' do
 
   it 'should be positive' do
-    expect(MiddlemanVCard::VERSION_MAJOR).to be >= 0
+    expect(Middleman::VCard::VERSION_MAJOR).to be >= 0
   end
 
 end
 
-describe 'MiddlemanVCard::VERSION_MINOR' do
+describe 'Middleman::VCard::VERSION_MINOR' do
 
   it 'should be positive' do
     expect(MiddlemanVCard::VERSION_MINOR).to be >= 0
@@ -28,10 +28,10 @@ describe 'MiddlemanVCard::VERSION_MINOR' do
 
 end
 
-describe 'MiddlemanVCard::VERSION_PATCH' do
+describe 'Middleman::VCard::VERSION_PATCH' do
 
   it 'should be positive' do
-    expect(MiddlemanVCard::VERSION_PATCH).to be >= 0
+    expect(Middleman::VCard::VERSION_PATCH).to be >= 0
   end
 
 end
