@@ -36,5 +36,3 @@ module Middleman
 
   end
 end
-
-::Middleman::Extensions.register(:vcard, Middleman::VCard::VCardExtension)

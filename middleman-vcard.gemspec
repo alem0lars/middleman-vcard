@@ -6,7 +6,7 @@ require "middleman-vcard/version"
 
 Gem::Specification.new do |gem|
   gem.name          = "middleman-vcard"
-  gem.version       = MiddlemanVCard::VERSION
+  gem.version       = Middleman::VCard::VERSION
   gem.summary       = %q{Middleman extension to generate VCards}
   gem.description   = %q{
     A Middleman extension to automatically generate VCards based on provided

@@ -16,6 +16,10 @@ require "middleman-core"
 
 require "middleman-vcard/version"
 require "middleman-vcard/generator"
-require "middleman-vcard/extension"
+
+Middleman::Extensions.register(:vcard) do
+  require "middleman-vcard/extension"
+  Middleman::VCard::VCardExtension
+end
 
 # }}}
