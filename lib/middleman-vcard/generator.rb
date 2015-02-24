@@ -1,7 +1,3 @@
-require("contracts") unless Kernel::const_defined?(:Contracts)
-require "vpim/vcard"
-
-
 module Middleman
   module VCard
     class Generator

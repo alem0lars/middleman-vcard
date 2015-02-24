@@ -1,7 +1,3 @@
-require "middleman-core"
-require "middleman-vcard/generator"
-
-
 module Middleman
   module VCard
     ##
@@ -22,12 +18,10 @@ module Middleman
 
         @destination_path = options_hash[:destination_path] ||
             File.join(app.root, app.config.source, "#{options_hash[:name]}.vcf")
-        @vcard_generator  = ::Generator.new(options_hash[:name],
-                                            options_hash[:emails],
-                                            options_hash[:phones],
-                                            options_hash[:addresses],
-                                            options_hash[:photo],
-                                            logger)
+        @vcard_generator  = Middleman::VCard::Generator.new(
+            options_hash[:name], options_hash[:emails],
+            options_hash[:phones], options_hash[:addresses],
+            options_hash[:photo], logger)
       end
 
       def after_configuration
