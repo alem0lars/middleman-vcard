@@ -1,6 +1,6 @@
 # Require - Core {{{
 
-require "pathname"
+require "logger"
 
 # }}}
 
@@ -8,6 +8,7 @@ require "pathname"
 
 require "contracts"
 require "vpim/vcard"
+require "middleman-core"
 
 # }}}
 

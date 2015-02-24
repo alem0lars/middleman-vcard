@@ -6,8 +6,12 @@ require File.expand_path("../lib/middleman-vcard/version", __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "middleman-vcard"
   gem.version       = MiddlemanVCard::VERSION
-  gem.summary       = %q{TODO: project summary}
-  gem.description   = %q{TODO: project description}
+  gem.summary       = %q{Middleman extension to generate VCards}
+  gem.description   = %q{
+    A Middleman extension to automatically generate VCards based on provided
+    configurations.
+    This is particularly useful in contacts pages to create a vcard button.
+  }
   gem.license       = "Apache License Version 2.0"
   gem.authors       = ["Alessandro Molari"]
   gem.email         = "molari.alessandro@gmail.com"
