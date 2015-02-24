@@ -6,8 +6,6 @@ require "logger"
 
 # Require - External {{{
 
-require "contracts"
-require "vpim/vcard"
 require "middleman-core"
 
 # }}}
