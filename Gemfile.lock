@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    middleman-vcard (0.9.1)
+    middleman-vcard (0.9.2)
       contracts
       middleman-core (>= 3.3.10)
       vpim
