@@ -20,6 +20,8 @@ require "middleman-core"
 require "middleman-vcard/version"
 require "middleman-vcard/generator"
 
+# Register the extension with name: `:vcard` and lazily require the related
+# module (the module containing the Middleman extension).
 Middleman::Extensions.register(:vcard) do
   require "middleman-vcard/extension"
   Middleman::VCard::VCardExtension

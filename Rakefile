@@ -15,8 +15,10 @@ require "yard"
 require "middleman-vcard"
 
 
+# Include RSpec tasks.
 RSpec::Core::RakeTask.new
 
+# Include YARD tasks.
 YARD::Rake::YardocTask.new
 
 desc "Open a console preloaded with middleman-vcard."
@@ -24,4 +26,5 @@ task :console do
   sh "pry --gem", verbose: false
 end
 
+# The default task.
 task default: [:spec]

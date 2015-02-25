@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 0.9.5 (Feb 25, 2015)
+
+* Code smells.
+* Better documentation.
+
 ## 0.9.4 (Feb 25, 2015)
 
 * Code smells.

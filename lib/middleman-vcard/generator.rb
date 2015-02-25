@@ -116,15 +116,32 @@ module Middleman
 
       protected
 
+      ##
+      # Log the provided error message and raise an error.
+      #
+      # @param msg [String] The error message.
+      #
       def error(msg)
         @logger.error(format_msg(msg))
         fail("Middleman VCard generator failed")
       end
 
+      ##
+      # Log the provided informative message.
+      #
+      # @param msg [String] The informative message.
+      #
       def info(msg)
         @logger.info(format_msg(msg))
       end
 
+      ##
+      # Format the provided message.
+      #
+      # @param msg [String] The message to be formatted.
+      #
+      # @return The formatted message.
+      #
       def format_msg(msg)
         "[VCard] #{msg}"
       end

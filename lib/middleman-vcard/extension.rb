@@ -17,6 +17,9 @@ module Middleman
 
       option :dst_path, nil, "The destination path for the generated VCard"
 
+      ##
+      # Create the VCardExtension.
+      #
       def initialize(app, options_hash={}, &block)
         super
 
@@ -54,6 +57,10 @@ module Middleman
         app.config.define_setting :vcard_dir_path,  @vcard_dir_path.to_s
       end
 
+      ##
+      # After Middleman has been configured (i.e. build, console, server, etc..)
+      # generate the VCard.
+      #
       def after_configuration
         @vcard_generator.generate(@vcard_dir_path.join(@vcard_file_name))
       end
