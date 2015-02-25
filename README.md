@@ -91,4 +91,4 @@ Many thanks to Luca Molari (LMolr)!!
 
 Copyright (c) 2015 Alessandro Molari
 
-See {file:LICENSE} for details.
+See [LICENSE](./LICENSE) for details.
