@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 0.9.4 (Feb 25, 2015)
+
+* Code smells.
+
 ## 0.9.3 (Feb 25, 2015)
 
 * First really working version.
