@@ -1,6 +1,7 @@
 # Middleman VCard
 
 ![Status](http://img.shields.io/badge/status-OK-green.svg)
+[![Gem Version](https://badge.fury.io/rb/middleman-vcard.svg)](http://badge.fury.io/rb/middleman-vcard)
 
 ## Project informations
 
