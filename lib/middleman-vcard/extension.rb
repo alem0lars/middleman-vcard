@@ -21,11 +21,17 @@ module Middleman
 
         @name = options_hash[:name]
 
+        source_dir_path = Pathname.new(app.root).join(app.config.source)
+
         if options_hash[:dst_path]
+          unless options_hash[:dst_path].start_with?(source_dir_path.to_s)
+            error("Invalid `dst_path`. It's not inside the source folder.")
+          end
+
           @base_dir_path   = Pathname.new(File.dirname(options_hash[:dst_path]))
           @vcard_file_name = File.basename(options_hash[:dst_path])
         else
-          @base_dir_path   = Pathname.new(app.root).join(app.config.source)
+          @base_dir_path   = source_dir_path
           @vcard_file_name = "#{@name}.vcf"
         end
 
