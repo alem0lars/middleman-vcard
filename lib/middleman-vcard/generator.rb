@@ -118,7 +118,7 @@ module Middleman
 
       def error(msg)
         @logger.error(format_msg(msg))
-        # TODO: Raise error.
+        fail("Middleman VCard generator failed")
       end
 
       def info(msg)
