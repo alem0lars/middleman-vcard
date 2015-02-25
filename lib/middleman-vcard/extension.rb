@@ -14,8 +14,7 @@ module Middleman
       option :addresses, [],  "The VCard addresses"
       option :photo,     nil, "The VCard photo"
 
-      option :dst_path, nil, "The destination path for the generated VCard",
-             required: true
+      option :dst_path, nil, "The destination path for the generated VCard"
 
       def initialize(app, options_hash={}, &block)
         super
