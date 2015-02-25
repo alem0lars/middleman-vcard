@@ -9,8 +9,8 @@ Gem::Specification.new do |gem|
   gem.version       = Middleman::VCard::VERSION
   gem.summary       = %q{Middleman extension to generate VCards}
   gem.description   = %q{
-    A Middleman extension to automatically generate VCards based on provided
-    configurations.
+    A Middleman extension to automatically generate VCards based on provided configurations.
+    It also includes some useful Middleman helpers to work with the generated VCards.
     This is particularly useful in contacts pages to create a vcard button.
   }
   gem.license       = "Apache License Version 2.0"
@@ -32,6 +32,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency("yard")
   gem.add_development_dependency("rspec")
   gem.add_development_dependency("pry")
-  gem.add_development_dependency("pry-byebug")
 
 end
