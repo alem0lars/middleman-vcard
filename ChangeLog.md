@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 0.9.6 (Feb 25, 2015)
+
+* Less development dependencies.
+
 ## 0.9.5 (Feb 25, 2015)
 
 * Code smells.

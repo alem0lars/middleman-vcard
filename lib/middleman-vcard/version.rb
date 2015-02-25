@@ -14,7 +14,7 @@ module Middleman
     ##
     # The current patch version.
     #
-    VERSION_PATCH = 5
+    VERSION_PATCH = 6
 
     ##
     # The version string, following the semvers conventions.
