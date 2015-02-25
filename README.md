@@ -7,8 +7,8 @@
 
 ## Project informations
 
-* [Homepage](https://rubygems.org/gems/middleman-vcard)
 * [Documentation](http://rubydoc.info/gems/middleman-vcard/frames)
+* [RubyGems Homepage](https://rubygems.org/gems/middleman-vcard)
 * [Email](mailto:molari.alessandro@gmail.com)
 
 ## Description
