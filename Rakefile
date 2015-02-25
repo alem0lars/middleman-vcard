@@ -19,7 +19,7 @@ RSpec::Core::RakeTask.new
 
 YARD::Rake::YardocTask.new
 
-desc "open a console preloaded with middleman-vcard"
+desc "Open a console preloaded with middleman-vcard."
 task :console do
   sh "pry --gem", verbose: false
 end
