@@ -13,8 +13,7 @@
 
 ## Description
 
-A Middleman extension to generate VCards and provide useful helpers to work
-with.
+A Middleman extension to generate VCards and useful helpers to work with.
 
 ## Usage
 
