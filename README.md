@@ -68,13 +68,13 @@ already defined:
 
 *Generate a link tag that points to the VCard*.
 
-Details [here](./lib/middleman-vcard/extension).
+Details [here](./lib/middleman-vcard/extension.rb#L91).
 
 #### `vcard_path`
 
 *Build the path that points to the VCard file*.
 
-Details [here](./lib/middleman-vcard/extension).
+Details [here](./lib/middleman-vcard/extension.rb#L72).
 
 ## Contributors
 
