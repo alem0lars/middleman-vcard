@@ -2,6 +2,8 @@
 
 ![Status](http://img.shields.io/badge/status-OK-green.svg)
 [![Gem Version](https://badge.fury.io/rb/middleman-vcard.svg)](http://badge.fury.io/rb/middleman-vcard)
+[![Code Climate](https://codeclimate.com/github/alem0lars/middleman-vcard/badges/gpa.svg)](https://codeclimate.com/github/alem0lars/middleman-vcard)
+[![Test Coverage](https://codeclimate.com/github/alem0lars/middleman-vcard/badges/coverage.svg)](https://codeclimate.com/github/alem0lars/middleman-vcard)
 
 ## Project informations
 
