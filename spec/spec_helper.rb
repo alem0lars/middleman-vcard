@@ -1,6 +1,11 @@
-require 'rspec'
-require 'pry-byebug'
+# Integrate with CodeClimate.
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
+# Require RSpec library.
+require 'rspec'
+
+# Require the project main file.
 require 'middleman-vcard'
 
 
