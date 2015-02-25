@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    middleman-vcard (0.9.5)
+    middleman-vcard (0.9.6)
       contracts
       middleman-core (>= 3.3.10)
       vpim
@@ -15,18 +15,12 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    byebug (3.5.1)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
-      slop (~> 3.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     codeclimate-test-reporter (0.4.6)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
-    columnize (0.9.0)
     contracts (0.7)
-    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
@@ -65,9 +59,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.0.1)
-      byebug (~> 3.4)
-      pry (~> 0.10)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -113,7 +104,6 @@ DEPENDENCIES
   codeclimate-test-reporter
   middleman-vcard!
   pry
-  pry-byebug
   rake
   rspec
   yard
