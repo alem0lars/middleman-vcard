@@ -5,48 +5,44 @@ module Middleman
       include Contracts
 
       Contract( # {{{
-        # 1: name
-        String,
-        # 2: emails
-        ArrayOf[{
-          email:     String,
-          preferred: Or[Bool, nil],
-          location:  Or[String, nil]
-        }],
-        # 3: phones
-        ArrayOf[{
-          number:     String,
-          preferred:  Or[Bool, nil],
-          location:   Or[String, nil],
-          capability: Or[ArrayOf[String], nil]
-        }],
-        # 4: addresses
-        ArrayOf[{
-          preferred:  Or[Bool, nil],
-          location:   Or[String, nil],
-          street:     Or[String, nil],
-          postalcode: Or[String, nil],
-          locality:   Or[String, nil],
-          region:     Or[String, nil],
-          country:    Or[String, nil]
-        }],
-        # 5: photo
-        Or[{
-          path: String,
-          type: String
-        }, nil],
-        # 6: logger
-        Or[Logger, nil] => Any
+        String,                      # 1: name
+        {                            # Keyword arguments:
+          emails: Maybe[ArrayOf[{    # -> 2: emails
+            email:     String,
+            preferred: Or[Bool, nil],
+            location:  Or[String, nil]
+          }]],
+          phones: Maybe[ArrayOf[{    # -> 3: phones
+            number:     String,
+            preferred:  Or[Bool, nil],
+            location:   Or[String, nil],
+            capability: Or[ArrayOf[String], nil]
+          }]],
+          addresses: Maybe[ArrayOf[{ # -> 4: addresses
+            preferred:  Or[Bool, nil],
+            location:   Or[String, nil],
+            street:     Or[String, nil],
+            postalcode: Or[String, nil],
+            locality:   Or[String, nil],
+            region:     Or[String, nil],
+            country:    Or[String, nil]
+          }]],
+          photo: Maybe[{             # -> 5: photo
+            path: String,
+            type: String
+          }],
+          logger: Maybe[Logger]      # -> 6: logger
+        } => Any
       ) # }}}
       ##
       # Create a new VCard generator.
       #
-      def initialize(name,         # 1
-                     emails=[],    # 2
-                     phones=[],    # 3
-                     addresses=[], # 4
-                     photo=nil,    # 5
-                     logger=nil)   # 6
+      def initialize(name,           # 1
+                     emails:    [],  # 2
+                     phones:    [],  # 3
+                     addresses: [],  # 4
+                     photo:     nil, # 5
+                     logger:    nil) # 6
 
         @logger = logger || Logger.new($stdout)
 

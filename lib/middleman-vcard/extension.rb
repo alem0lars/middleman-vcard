@@ -45,7 +45,12 @@ module Middleman
         end
 
         @vcard_generator  = Middleman::VCard::Generator.new(
-            @name, @emails, @phones, @addresses, @photo, logger)
+            @name,
+            emails:    @emails,
+            phones:    @phones,
+            addresses: @addresses,
+            photo:     @photo,
+            logger:    logger)
 
         # Define some config used later
         #
