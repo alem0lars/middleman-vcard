@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 0.9.7 (Mar 02, 2015)
+
+* Better contracts.
+* Use keyword arguments.
+
 ## 0.9.6 (Feb 25, 2015)
 
 * Less development dependencies.
