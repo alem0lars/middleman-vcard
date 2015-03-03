@@ -1,8 +1,13 @@
 # ChangeLog
 
-## 0.9.7 (Mar 03, 2015)
+## 0.9.8 (Mar 03, 2015)
 
 * Better gemspec.
+
+## 0.9.7 (Mar 02, 2015)
+
+* Better contracts.
+* Use keyword arguments.
 
 ## 0.9.6 (Feb 25, 2015)
 
