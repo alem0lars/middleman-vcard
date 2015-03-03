@@ -4,33 +4,39 @@ $:.push File.expand_path("../lib", __FILE__)
 require "middleman-vcard/version"
 
 
-Gem::Specification.new do |gem|
-  gem.name          = "middleman-vcard"
-  gem.version       = Middleman::VCard::VERSION
-  gem.summary       = %q{Middleman extension to generate VCards}
-  gem.description   = %q{
-    A Middleman extension to automatically generate VCards based on provided configurations.
-    It also includes some useful Middleman helpers to work with the generated VCards.
-    This is particularly useful in contacts pages to create a vcard button.
+Gem::Specification.new do |s|
+  s.name    = "middleman-vcard"
+  s.version = Middleman::VCard::VERSION
+  s.license = "Apache License Version 2.0"
+
+  s.authors     = ["Alessandro Molari"]
+  s.email       = "molari.alessandro@gmail.com"
+  s.homepage    = "https://github.com/alem0lars/middleman-vcard"
+  s.summary     = %q{Middleman extension to generate VCards}
+  s.description = %q{
+    A Middleman extension to automatically generate VCards based on provided
+    configurations. It also includes some useful Middleman helpers to work with
+    the generated VCards. This is particularly useful in contacts pages to
+    create a vcard button.
   }
-  gem.license       = "Apache License Version 2.0"
-  gem.authors       = ["Alessandro Molari"]
-  gem.email         = "molari.alessandro@gmail.com"
-  gem.homepage      = "https://rubygems.org/gems/middleman-vcard"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^spec/})
-  gem.require_paths = ["lib"]
+  s.required_ruby_version = ">= 1.9.3"
+  s.platform              = Gem::Platform::RUBY
 
-  gem.add_dependency("middleman-core", [">= 3.3.10"])
-  gem.add_dependency("vpim")
-  gem.add_dependency("contracts")
+  s.files       = `git ls-files -z`.split("\0")
+  s.executables = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files  = s.files.grep(%r{^spec/})
 
-  gem.add_development_dependency("bundler")
-  gem.add_development_dependency("rake")
-  gem.add_development_dependency("yard")
-  gem.add_development_dependency("rspec")
-  gem.add_development_dependency("pry")
+  s.require_paths = ["lib"]
+
+  s.add_dependency("middleman-core", [">= 3.3.10"])
+  s.add_dependency("vpim")
+  s.add_dependency("contracts")
+
+  s.add_development_dependency("bundler")
+  s.add_development_dependency("rake")
+  s.add_development_dependency("yard")
+  s.add_development_dependency("rspec")
+  s.add_development_dependency("pry")
 
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    middleman-vcard (0.9.7)
+    middleman-vcard (0.9.8)
       contracts
       middleman-core (>= 3.3.10)
       vpim
@@ -17,7 +17,7 @@ GEM
       tzinfo (~> 1.1)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    codeclimate-test-reporter (0.4.6)
+    codeclimate-test-reporter (0.4.7)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     contracts (0.7)
