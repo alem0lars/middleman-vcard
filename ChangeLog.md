@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 0.9.9 (Apr 14, 2015)
+
+* Contracts bug fix.
+
 ## 0.9.8 (Mar 03, 2015)
 
 * Better gemspec.

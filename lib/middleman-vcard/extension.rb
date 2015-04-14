@@ -67,7 +67,7 @@ module Middleman
       # generate the VCard.
       #
       def after_configuration
-        @vcard_generator.generate(@vcard_dir_path.join(@vcard_file_name))
+        @vcard_generator.generate(@vcard_dir_path.join(@vcard_file_name).to_s)
       end
 
       helpers do
