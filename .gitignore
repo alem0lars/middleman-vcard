@@ -1,5 +1,3 @@
-# {{{ Ignores for generated/temporary files
-
 # Generated documentation
 doc/
 
@@ -11,16 +9,6 @@ tmp/
 pkg/
 vendor/cache/*.gem
 
-# }}}
-
-# {{{ Ignores for tools
-
-# IntelliJ IDEA project files
-.idea/
-*.iml
-
-# SublimeText project files
-*.sublime-project
-*.sublime-workspace
-
-# }}}
+# Bundler
+vendor/
+.bundle/
