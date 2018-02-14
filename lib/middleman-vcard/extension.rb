@@ -20,44 +20,28 @@ module Middleman
       ##
       # Create the VCardExtension.
       #
-      def initialize(app, options_hash={}, &block)
+      def initialize(app, options={}, &block)
         super
-
-        @name      = options_hash[:name]
-        @emails    = options_hash[:emails]
-        @phones    = options_hash[:phones]
-        @addresses = options_hash[:addresses]
-        @photo     = options_hash[:photo]
-
-        @dst_path = options_hash[:dst_path]
 
         source_dir_path = Pathname.new(app.root).join(app.config.source)
 
-        if @dst_path
-          unless @dst_path.start_with?(source_dir_path.to_s)
+        if options[:dst_path]
+          unless options[:dst_path].start_with?(source_dir_path.to_s)
             error("Invalid `dst_path`. It's not inside the source folder.")
           end
-          @vcard_dir_path  = Pathname.new(File.dirname(@dst_path))
-          @vcard_file_name = File.basename(@dst_path)
+          @vcard_dir_path  = Pathname.new(File.dirname(options[:dst_path]))
+          @vcard_file_name = File.basename(options[:dst_path])
         else
           @vcard_dir_path  = source_dir_path
-          @vcard_file_name = "#{@name}.vcf"
+          @vcard_file_name = "#{options[:name]}.vcf"
         end
-
-        @vcard_generator  = Middleman::VCard::Generator.new(
-            @name,
-            emails:    @emails,
-            phones:    @phones,
-            addresses: @addresses,
-            photo:     @photo,
-            logger:    logger)
 
         # Define some config used later
         #
         # NOTE: We want to be consistent with Middleman conventions, so
         #       `vcard_dir_path` is a `String` because all Middleman paths are
         #       `String`s.
-        app.config.define_setting :vcard_name,      @name
+        app.config.define_setting :vcard_name,      options[:name]
         app.config.define_setting :vcard_file_name, @vcard_file_name
         app.config.define_setting :vcard_dir_path,  @vcard_dir_path.to_s
       end
@@ -67,7 +51,14 @@ module Middleman
       # generate the VCard.
       #
       def after_configuration
-        @vcard_generator.generate(@vcard_dir_path.join(@vcard_file_name).to_s)
+        vcard_generator = Middleman::VCard::Generator.new(
+            options[:name],
+            emails:    options[:emails],
+            phones:    options[:phones],
+            addresses: options[:addresses],
+            photo:     options[:photo],
+            logger:    logger)
+        vcard_generator.generate(@vcard_dir_path.join(@vcard_file_name).to_s)
       end
 
       helpers do
